@@ -1,5 +1,5 @@
-import * as Interfaces from "../../interfaces";
-import * as Utils from "../../utils";
+import * as Interfaces from "../../interfaces/index";
+import * as Utils from "../../utils/index";
 
 const getAllInstitute: Interfaces.Controllers.Async = async (
   _req,

@@ -1,6 +1,6 @@
-import * as Interfaces from "../../interfaces";
-import * as Utils from "../../utils";
-import * as Error from "../../globals/errors";
+import { invalidDetails } from "src/globals/errors";
+import * as Interfaces from "../../interfaces/index";
+import * as Utils from "../../utils/index";
 
 const searchInstitute: Interfaces.Controllers.Async = async (
   req,
@@ -10,7 +10,7 @@ const searchInstitute: Interfaces.Controllers.Async = async (
   try {
     const instituteName = req.query.institutename as string;
     if (!instituteName) {
-      return res.json(Error.invalidDetails);
+      return res.json(invalidDetails);
     }
     const institutes = await Utils.prisma.institution.findMany({
       where: {
