@@ -75,5 +75,6 @@
       "./dist/**",
       ".serverless/**"
     ]
-  }
+  },
+  "type": "module"
 }
