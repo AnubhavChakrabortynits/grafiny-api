@@ -1,11 +1,5 @@
 {
   "name": "penpal-t",
-  "config": {
-    "dist_dir": "dist",
-    "build_dir": "build",
-    "build_entry": "server.js",
-    "dist_outfile": "main.js"
-  },
   "scripts": {
     "prod": "tsc",
     "prod-start": "node ./dist/server.js",
