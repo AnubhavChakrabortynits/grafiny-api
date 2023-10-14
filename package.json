@@ -17,7 +17,7 @@
     "dev-win": "nodemon -e ts --exec pnpm run start-win",
     "build": "pnpm compile && pnpm esbuild && rm -rf $npm_package_config_build_dir",
     "build-win": "pnpm compile && pnpm esbuild-win && del /s /q /f %npm_package_config_build_dir% 1>nul",
-    "esbuild": "esbuild $npm_package_config_build_dir/$npm_package_config_build_entry --bundle --platform=node --target=node18 --outfile=$npm_package_config_dist_dir/$npm_package_config_dist_outfile --minify",
+    "esbuild": "esbuild server.js --bundle --platform=node --target=node18 --outfile=dist/main.js --minify",
     "esbuild-win": "esbuild server.js --bundle --platform=node --target=node18 --outfile=dist/main.js --minify",
     "compile": "tsc",
     "lint": "eslint . --ext .ts --fix",
