@@ -23,7 +23,15 @@ admin.initializeApp({
 app
   .use(
     cors({
-      origin: true,
+      origin: [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://grafiny-client.vercel.app",
+        "https://main--grafiny-gdsc-nits.netlify.app",
+        "https://grafiny-gdsc-nits.netlify.app",
+        "https://grafiny-nits.netlify.app",
+        "https://grafiny.gdscnits.in",
+      ],
       credentials: true,
       exposedHeaders: ["set-cookie"],
     })
